@@ -101,7 +101,7 @@ class Lab1Frame(ctk.CTkFrame):
             n = int(self.entry_n.get()) if self.entry_n.get() else 1000
             lemer_seq = lab1.generate_lemer(n, seed=lab1.X0)
             lemer_pi = lab1.cesaro_test(lemer_seq)
-            system_seq = [random.randint(1, lab1.M) for _ in range(n)]
+            system_seq = [secrets.randbelow(lab1.M) + 1 for _ in range(n)]
             system_pi = lab1.cesaro_test(system_seq)
             self.write_to_log(f"📊 Тест Чезаро (N={n}):\n   🍓 Мій Лемер: π ≈ {lemer_pi:.6f}\n   🍏 System:   π ≈ {system_pi:.6f}\n   🎯 Реальне π: {math.pi:.6f}")
             accuracy = max(0, 100 - (abs(math.pi - lemer_pi) / math.pi * 100))
