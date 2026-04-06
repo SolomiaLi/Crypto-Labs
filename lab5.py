@@ -13,7 +13,7 @@ class DigitalSignature:
 
     def generate_keys(self, key_size=2048):
         """Генерує пару ключів DSA (DSS) для підпису."""
-        # Використовуємо алгоритм DSA замість RSA
+        # Використовуємо алгоритм DSA 
         self.private_key = dsa.generate_private_key(key_size=key_size)
         self.public_key = self.private_key.public_key()
 
