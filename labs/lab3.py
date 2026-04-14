@@ -28,9 +28,9 @@ class RC5:
             L[i // u] = (L[i // u] << 8) + key[i]
 
         self.S = [0] * (2 * self.r + 2)
-        self.S[0] = self.Pw
+        self.S[0] = self.pw
         for i in range(1, 2 * self.r + 2):
-            self.S[i] = (self.S[i - 1] + self.Qw) & self.mask
+            self.S[i] = (self.S[i - 1] + self.qw) & self.mask
 
         i = j = A = B = 0
         for _ in range(3 * max(c, 2 * self.r + 2)):
