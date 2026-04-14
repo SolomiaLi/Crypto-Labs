@@ -7,7 +7,7 @@ X0 = 5
 
 def get_gcd(a, b):
     if a <= 0 or b <= 0: return 1
-    if a < b:
+    if a <= b:
         a, b = b, a
     while True:
         r = a % b

@@ -138,5 +138,5 @@ class Lab3Frame(ctk.CTkFrame):
                 with open(save_path, "wb") as f:
                     f.write(result)
                 messagebox.showinfo("Успіх", "Файл успішно розшифровано! 🔓")
-        except Exception as e:
+        except Exception:
             messagebox.showerror("Помилка", "Не вдалося розшифрувати. Можливо, пароль невірний? 😿")

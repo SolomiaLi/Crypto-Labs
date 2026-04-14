@@ -112,7 +112,7 @@ class Lab4Frame(ctk.CTkFrame):
             self.rsa.encrypt_file(filepath, savepath)
             end_time = time.time()
             elapsed = end_time - start_time
-            self.log(f"🔒 Файл успішно зашифровано!")
+            self.log("🔒 Файл успішно зашифровано!")
             self.log(f"⏱ Час шифрування (RSA): {elapsed:.4f} секунд.")
         except Exception as e:
             messagebox.showerror("Помилка шифрування", str(e))
@@ -129,7 +129,7 @@ class Lab4Frame(ctk.CTkFrame):
                                                 initialfile="decrypted.txt")
         if not savepath: return
 
-        self.log(f"⏳ Починаю розшифрування файлу...")
+        self.log("⏳ Починаю розшифрування файлу...")
         self.update()
 
         start_time = time.time()
@@ -137,7 +137,7 @@ class Lab4Frame(ctk.CTkFrame):
             self.rsa.decrypt_file(filepath, savepath)
             end_time = time.time()
             elapsed = end_time - start_time
-            self.log(f"🔓 Файл успішно розшифровано!")
+            self.log("🔓 Файл успішно розшифровано!")
             self.log(f"⏱ Час розшифрування (RSA): {elapsed:.4f} секунд.")
         except Exception as e:
             messagebox.showerror("Помилка розшифрування", "Невірний ключ або файл пошкоджено.\n" + str(e))

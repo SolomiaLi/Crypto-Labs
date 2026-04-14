@@ -1,6 +1,7 @@
 import unittest
 import os
 import sys
+from unittest import result
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from labs.lab4 import RSACipher
@@ -82,7 +83,7 @@ class TestRSACipher(unittest.TestCase):
             if labs_dir not in sys.path:
                 sys.path.insert(0, labs_dir)
             runpy.run_path("labs/lab4.py", run_name="__main__")
-            self.assertTrue(True)
+            self.assertIsNone(result)
         finally:
             sys.path = original_path
 

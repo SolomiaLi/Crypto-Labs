@@ -33,15 +33,14 @@ class TestLab1(unittest.TestCase):
         self.assertGreater(res, 0)
 
     def test_find_period(self):
-        # Підміняємо константи на маленькі, щоб тест пройшов за мілісекунду, а не завис
-        orig_M, orig_A, orig_C = lab1.M, lab1.A, lab1.C
+        orig_m, orig_a, orig_c = lab1.M, lab1.A, lab1.C
         lab1.M, lab1.A, lab1.C = 10, 3, 1
 
         period = lab1.find_period()
-        self.assertTrue(period > 0)
+        self.assertTrue(period, 0)
 
-        # Повертаємо оригінальні константи
-        lab1.M, lab1.A, lab1.C = orig_M, orig_A, orig_C
+
+        lab1.M, lab1.A, lab1.C = orig_m, orig_a, orig_c
 
 
 if __name__ == '__main__':

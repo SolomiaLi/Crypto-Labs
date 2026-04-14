@@ -7,8 +7,8 @@ class RC5:
         self.b = len(key)
         self.mod = 2 ** w
         self.mask = self.mod - 1
-        self.Pw = 0xB7E151628AED2A6B
-        self.Qw = 0x9E3779B97F4A7C15
+        self.pw = 0xB7E151628AED2A6B
+        self.qw = 0x9E3779B97F4A7C15
 
         self._expand_key(key)
 

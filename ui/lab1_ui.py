@@ -93,7 +93,7 @@ class Lab1Frame(ctk.CTkFrame):
         if period == lab1.M:
             self.write_to_log("✅ Висновок: Період максимальний.")
         else:
-            self.write_to_log(f"⚠️ Висновок: Період менший за M.")
+            self.write_to_log("⚠️ Висновок: Період менший за M.")
 
     def run_cesaro(self):
         try:
